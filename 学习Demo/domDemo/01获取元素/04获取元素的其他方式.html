@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+    <div name='main'></div>
+
+    <div class="a"></div>
+    <div class="b"></div>
+    <p class="a"></p>
+
+    <script>
+        // var divs = document.getElementsByName('main');
+        // console.log(divs);
+
+        // 根据选择器获取元素
+        // var  main = document.querySelector('#main');
+        // console.log(main);
+
+        // 只能获取到一个元素
+        // var ele = document.querySelector('.a');
+        // console.log(ele);
+
+        var eles = document.querySelectorAll('.a');
+        console.log(eles);
+    </script>
+</body>
+</html>

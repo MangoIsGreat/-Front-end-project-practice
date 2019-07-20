@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        nav {
+            width: 882px;
+            height: 86px;
+            border: 1px solid pink;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        nav ul {
+            width: 200%;
+            animation: moving 5s linear infinite;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav:hover ul {
+            animation-play-state: paused;
+        }
+        @keyframes moving {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-882px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="../images/nav1.jpg" alt=""></li>
+            <li><img src="../images/nav2.jpg" alt=""></li>
+            <li><img src="../images/nav3.jpg" alt=""></li>
+            <li><img src="../images/nav4.jpg" alt=""></li>
+            <li><img src="../images/nav5.jpg" alt=""></li>
+            <li><img src="../images/nav6.jpg" alt=""></li>
+            <li><img src="../images/nav7.jpg" alt=""></li>
+            <li><img src="../images/nav1.jpg" alt=""></li>
+            <li><img src="../images/nav2.jpg" alt=""></li>
+            <li><img src="../images/nav3.jpg" alt=""></li>
+            <li><img src="../images/nav4.jpg" alt=""></li>
+            <li><img src="../images/nav5.jpg" alt=""></li>
+            <li><img src="../images/nav6.jpg" alt=""></li>
+            <li><img src="../images/nav7.jpg" alt=""></li>
+        </ul>
+    </nav>
+</body>
+</html>

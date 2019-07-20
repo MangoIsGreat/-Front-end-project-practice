@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建对象的的方式</title>
+    <script>
+        // 第一种创建对象的方式：对象的字面量方式   ----  相当于是第二种方法的简写
+        // var hero = {
+        //     name: '黄忠',
+        //     weapon:'弓箭',
+        //     equipment: ['头盔', '靴子', '盔甲'],
+        //     blood: 100,
+        //     attack: function () {
+        //         console.log(this.name+'：射箭');
+        //     },
+        //     run: function () {
+        //         console.log(this.name+'：加速跑');
+        //     }
+        // }
+        // console.log(hero.name);
+        // console.log(hero.equipment);
+
+        // hero.attack();
+        // hero.run();
+
+
+        // 第二种创建对象的方式：new Object()
+        // Object是一个构造函数
+        // new的方式来调用构造函数
+        // new Object() 调用构造函数会在内存中创建一个对象
+            // var hero = new Object(); 创建了一个空的对象
+            // 打印一个不存在的属性会输出undefined
+            // console.log(hero.name);
+
+            // 动态增加属性和方法，和变量赋值有点像，只是单独的叫函数，对象中的函数叫方法（利用的是javascript的动态特性，动态的增加成员）
+            // 属性
+            // hero.name = '黄忠';
+            // hero.weapon = '弓箭';
+            // hero.equipment = ['头盔','靴子','盔甲'];
+            // hero.blood = 100;
+
+
+            // 方法
+            // hero.attack = function () {
+            //     console.log(this.name + ':射箭');
+            // }
+            // hero.run = function () {
+            //     console .log(this.name + ':加速跑');
+            // }
+
+
+        // 第三种创建对象的方式：工厂模式（相当于是自定义构造函数）
+        // function createHero (name, weapon, equipment, blood) {
+        //     var hero = new Object();  //返回一个空的对象
+
+        //     // 属性
+        //     hero.name = name;
+        //     hero.weapon = weapon;
+        //     hero.equipment = equipment;
+        //     hero.blood = blood;
+
+        //     // 方法
+        //     hero.attack = function () {
+        //         console.log(this.name + ':攻击');
+        //     }
+        //     hero.run = function () {
+        //         console.log(this.name + ':加速跑');
+        //     }
+
+        //     return hero;
+        // }   
+
+        // var hero1 = createHero('黄忠', '弓箭', ['头盔', '靴子'], 100);
+        // var hero2 = createHero('刘备', '剑', ['头盔', '盔甲'], 100);
+
+        // console.log(hero1.name);
+        // console.log(hero1.weapon);
+        // hero1.attack();
+        // hero1.run();
+
+        // console.log(hero2.name);
+        // console.log(hero2.weapon);
+        // hero2.attack();
+        // hero2.run();
+
+        // 第四种创建对象的方式：自定义构造函数(new Hero()的形式)  ----  推荐方法
+        // 帕斯卡命名方式命名“自定义构造函数”，不同于驼峰命名法的是，帕斯卡命名法第一个字母也要大写
+        function Hero (name, weapon, equipment, blood) {
+            // this动态的给对象增加成员
+            // this指向了当前对象
+            this.name = name;
+            this.weapon = weapon;
+            this.equipment = equipment;
+            this.blood = blood;
+
+            this.attack = function () {
+                console.log(this.name + ':攻击');
+            }
+            this.run = function () {
+                console.log(this.name + ':加速跑');
+            }        
+        }
+
+        var hero1 = new Hero('黄忠', '弓箭', ['头盔', '靴子'], 100);
+        var hero2 = new Hero('刘备', '剑', ['头盔', '盔甲'], 100);
+
+        console.log(hero1.name);
+        console.log(hero1.weapon);
+        hero1.attack();
+        hero1.run();
+
+        console.log(hero2.name);
+        console.log(hero2.weapon);
+        hero2.attack();
+        hero2.run();
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

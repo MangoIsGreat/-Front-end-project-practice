@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#btn').click(function() {
+                // 多条件选择器通过逗号分隔
+                $('span, p, li, div').css('backgroundColor', 'green');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <span>这是一个span标签</span>
+    <p>导师喜欢男人</p>
+    <il>
+        <li>倒是喜欢男人</li>
+        <li>凤姐喜欢导师</li>
+        <li>导师喜欢凤姐</li>
+    </il>
+</body>
+<div></div>
+</html>

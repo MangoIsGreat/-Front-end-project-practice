@@ -1,0 +1,121 @@
+.ct_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 头部     start*/
+.ct_container .ct_header {
+    width: 100%;
+    height: 45px;
+    background-color: #006699;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.ct_container .ct_header h3 {
+    font-size: 16px;
+    line-height: 45px;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+.ct_container .ct_header a {
+    /*a标签公共样式*/
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+}
+
+.ct_container .ct_header a span {
+    color: #ffffff;
+    line-height: 45px;
+    position: absolute;
+}
+
+.ct_container .ct_header .fa-arrow-left {
+    left: 8px;
+}
+
+.ct_container .ct_header .fa-search {
+    right: 10px;
+}
+
+.ct_container .ct_header .left {
+    left: 0;
+}
+
+.ct_container .ct_header .right {
+    right: 0;
+}
+
+/* 头部     end*/
+
+
+
+/* 中间内容区域  start*/
+.ct_container .ct_content {
+    padding: 45px 0 55px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ct_container .ct_wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 中间内容区域  end*/
+
+
+
+/* 底部区域   start*/
+/* .ct_container .ct_header */
+.ct_container .ct_footer {
+    width: 100%;
+    height: 55px;
+    background-color: #006699;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.ct_container .ct_footer a {
+    color: #fff;
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: 55px;
+    padding-top: 10px;
+}
+
+.ct_container .ct_footer a.now {
+    color: orange;
+}
+
+
+.ct_container .ct_footer a span {
+    display: block;
+    font-size: 12px;
+    padding-top: 7px;
+}
+
+/* 底部区域   end*/
+
+body {
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

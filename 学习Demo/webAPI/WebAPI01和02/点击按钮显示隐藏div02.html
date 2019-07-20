@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击按钮显示隐藏div02</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .hidden {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="隐藏">
+<br>
+<div id="box"></div>
+
+<script>
+    // 1.获取元素
+    var btn = document.getElementById('btn');
+    // 2.注册点击事件
+    // isShow记录了box的状态，true显示-----flase隐藏
+    var isShow = true;
+    btn.onclick = function () {
+        // 控制div的显示隐藏
+        var box = document.getElementById('box');
+        if (isShow) {
+            box.className = 'hidden';
+
+            this.value = '显示';
+
+            isShow =false;
+        } else {
+            box.className = 'show';
+            this.value = '隐藏';
+            isShow = true;
+        }
+    }
+</script>
+</body>
+</html>

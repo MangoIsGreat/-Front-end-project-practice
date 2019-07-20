@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com" title="我是百度" id="link">百度</a>
+    <img src="../images/a.jpg" alt="美女" id="mv">
+
+    <script>
+        var link = document.getElementById('link');
+        var mv  = document.getElementById('mv');
+
+        // 获取DOM对象的属性值
+        console.dir(link);
+        console.log(link.href);
+
+
+        console.log(mv.src);
+        console.log(mv.alt);
+        console.log(mv.id);
+
+        // 设置DOM对象的属性值
+        link.href = 'http://www.sina.com';
+        console.log(link.href);
+
+    </script>
+</body>
+</html>

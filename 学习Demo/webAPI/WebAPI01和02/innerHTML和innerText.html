@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>innerHTML和innerText</title>
+</head>
+<body>
+<div id="box">
+    我是一个div
+    <span>这是一个span</span>
+</div>
+
+<b>123</b>
+
+<script>
+    var box = document.getElementById('box');
+    console.dir(box);
+
+    // innerHTML和innerText主要用于获取开始标签和结束标签之间的内容
+
+    // innerHTML  获取内容的时候，如果内容中有标签，会把标签页获取到
+    // 原封不动的获取内容
+
+    console.log(box.innerHTML);
+
+    // innerText  获取内容的时候，如果内容中有标签，会把标签过滤掉
+    // innerText 会把内容中存在的标签过滤掉
+    // innerText会把前后的换行和空白都去掉
+    console.log(box.innerText);
+    // 设置标签之间的内容
+    box.innerHTML = '';
+    console.log(box.innerHTML);
+    console.log(box.innerText);
+
+    console.dir(box);
+    // 通过innerHTML设置内容，如果内容中带标签，会以HTML的方式来解析
+    // box.innerHTML = '<b>黑马</b>程序员';
+
+    // 通过innerText设置内容，如果内容中带标签，在网页上会把标签显示出来
+    box.innerText = '<b>黑马</b>程序员';
+</script>
+</body>
+</html>

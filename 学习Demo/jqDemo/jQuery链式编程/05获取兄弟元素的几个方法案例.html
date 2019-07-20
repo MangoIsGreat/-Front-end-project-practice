@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#uu>li').mouseenter(function() {
+                $(this).css('backgroundColor', 'red').siblings().css('backgroundColor','');
+            }).mouseleave(function() {
+                $(this).css('backgroundColor', '').siblings().css('backgroundColor', '');
+            }).click(function() {
+                // .end()方法，修复断链
+                $(this).prevAll().css('backgroundColor', 'yellow').end().nextAll().css('backgroundColor','blue');
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul id="uu">
+        <li>fgtj5u</li>
+        <li>给你任何吗</li>
+        <li>DGTEJ</li>
+        <li>还要人家</li>
+        <li>固体溶解</li>
+        <li>得很愉快</li>
+        <li>太绝了</li>
+        <li>富数据通路</li>
+    </ul>
+</body>
+</html>

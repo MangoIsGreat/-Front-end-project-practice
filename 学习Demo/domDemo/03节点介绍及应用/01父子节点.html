@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <span>span</span>
+        <p>p</p>
+    </div>
+
+    <script>
+        // var box = document.getElementById('box');
+        // console.log(box.parentNode);
+        // // 返回的不是数组而是节点列表，是一个集合
+        // // console.log(box.childNodes);
+
+        // for (var i = 0; i < box.childNodes.length; i++) {
+        //     var node = box.childNodes[i];
+        //     if (node.nodeType === 1) {
+        //         console.log(node);
+        //     }
+        // }
+
+        var box = document.getElementById('box');
+        console.log(box.children);
+    </script>
+</body>
+</html>

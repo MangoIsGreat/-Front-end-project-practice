@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#btn').click(function() {
+                // 创建p标签,并用变量接收p标签对象
+                var pObj = $('<p></p>');
+                pObj.text('哈哈哈，我又变帅了');
+                // $('#dv').append(pObj); //在div中创建p标签
+                // 把pObj对象主动添加到div中
+                pObj.appendTo('#dv');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="创建元素" id="btn">
+    <div id="dv"></div>
+</body>
+</html>

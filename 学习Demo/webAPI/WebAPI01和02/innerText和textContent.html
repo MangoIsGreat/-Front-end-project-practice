@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>innerText和textContent</title>
+</head>
+<body>
+<div id="box">
+    我是一个box
+    <b>hello</b>
+</div>
+<script>
+    // innerText最早出现在IE浏览器中
+
+    // 注意浏览器的兼容性问题
+
+    // 老版本的firefox浏览器不支持innerText
+    // 2016的时候，已经把innerText在DOM中规定为正式的标准属性
+
+
+    // textContent
+    var box = document.getElementById('box');
+    // 都会把标签过滤
+    // 前后的空白和一些换行去掉
+    // console.log(box.innerText);
+
+    // 原封不动的把内容输出
+    console.log(box.textContent);
+</script>
+</body>
+</html>

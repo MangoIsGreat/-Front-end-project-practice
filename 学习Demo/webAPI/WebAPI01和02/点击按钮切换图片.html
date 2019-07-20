@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击按钮切换图片</title>
+    <style>
+        img{
+            width: 256px;
+            height: 160px!important;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="点我">
+<br>
+<img src="images/a.jpg" alt="" id="mv" width="400" height="300">
+
+<script>
+    // 1.获取按钮
+    var btn = document.getElementById('btn');
+    var mv = document.getElementById('mv');
+    // 2.给按钮注册事件
+    var flag = 1;
+    // 当flag的值是1的时候，对应的是a.jpg,当flag的值是2的时候，对应的是b.jpg
+    btn.onclick = function () {
+        // 3.切换图片
+        if (flag === 1) {
+            mv.src = 'images/1.jpg';
+            flag = 2;
+        } else if (flag === 2) {
+            mv.src = 'images/2.jpg';
+            flag =1;
+        }
+    }
+</script>
+</body>
+</html>

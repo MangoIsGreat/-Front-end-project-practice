@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="common.js"></script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <div id="box"></div>
+
+    <script>
+        var datas = ['刘德华', '黄渤', '赵兴'];
+        my$('btn').onclick = function () {
+            var ul = document.createElement('ul');
+
+            my$('box').appendChild(ul);
+
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i];
+
+                var li = document.createElement('li');
+
+                ul.appendChild(li);
+
+                // li.innerHTML = data;
+                setInnerText(li, data);
+
+                li.onmouseover = liMouseOver;
+                li.onmouseout = liMouseOut;
+                
+            }
+        }
+
+        function liMouseOver() {
+            this.style.backgroundColor = 'red';
+        }
+        function liMouseOut() {
+            this.style.backgroundColor = '';
+        }
+
+        function setInnerText(element, content) {
+            if (typeof element.innerText === 'string') {
+                element.innerText = content;
+            } else {
+                element.textContent = content;
+            }
+        }
+
+    </script>
+</body>
+</html>

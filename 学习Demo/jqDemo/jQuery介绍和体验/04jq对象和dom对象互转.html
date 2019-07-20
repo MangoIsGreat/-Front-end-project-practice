@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        // window.onload = function () {
+            // var btn = document.getElementById('btn');
+            // btn.onclick = function () {
+            //     this.style.backgroundColor = 'red';
+            // }
+
+            // dom对象转jQuery对象----->  直接将dom对象放到jq对象中就可以了
+            // $(btn).click(function () {
+            //     $(this).css({'backgroundColor': 'red'});
+            // })
+
+
+            // jQuery对象转dom对象的两种方式
+            // var btnObj = document.getElementById('btn');
+            // var obj = $(btnObj).get(0);
+            // obj.onclick = function () {
+            //     this.style.backgroundColor = 'yellow';
+            // }
+
+
+            // var btnObj  = document.getElementById('btn');
+            // var obj = $(btnObj)[0];
+            // obj.onclick = function () {
+            //     this.style.backgroundColor = 'skyblue';
+            // }
+        // }
+    </script>
+
+    <script>
+        $(function() {
+            // $('#btn').click(function() {
+            //     $(this).css({'backgroundColor': 'red'});
+            // })
+            // $('#btn').onclick = function () {
+            //     this.style.backgroundColor = 'red';
+            // }
+
+            $('#btn')[0].onclick = function () {
+                this.style.backgroundColor = 'red';
+            }
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">
+</body>
+</html>

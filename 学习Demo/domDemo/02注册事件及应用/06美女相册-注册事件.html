@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <h2>美女画廊</h2>
+    <div id="imagegallery">
+        <a href="../images/1.jpg" title="美女A">
+            <img src="../images/1-small.jpg" alt="美女1" width="100px">
+        </a>
+        <a href="../images/2.jpg" title="美女B">
+            <img src="../images/2-small.jpg" alt="美女2" width="100px">
+        </a>
+        <a href="../images/3.jpg" title="美女C">
+            <img src="../images/3-small.jpg" alt="美女3" width="100px">
+        </a>
+        <a href="../images/4.jpg" title="美女D">
+            <img src="../images/4-small.jpg" alt="美女4" width="100px">
+        </a>
+    </div>
+    <div style="clear: both"></div>
+
+    <img src="../images/placeholder.png" alt="" id="image" width="450px" />
+
+    <p id="des">选择一个图片</p>
+    <script>
+        // 1.获取到所有的a标签
+        var imagegallery = document.getElementById('imagegallery');
+        var links = imagegallery.getElementsByTagName('a');
+        // 2.给所有的a标签注册事件
+        for (var i = 0; i < links.length; i++) {
+            // 所有的a标签对应的元素
+            var link = links[i];
+            link.onclick = function () {
+                var image = document.getElementById('image');
+                var des = document.getElementById('des');
+                // 当循环结束之后，link指向的是第四个a标签，所以无论点哪张图片，都是显示第四张图片，
+                // 如果想实现图片切换，应该将link转换成this
+
+                // 4.切换图片
+                image.src = this.href;
+                // 5.设置p标签的内容
+                des.innerText = this.title;
+                // 取消a标签的默认行为
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

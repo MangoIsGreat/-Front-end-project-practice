@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cls {
+            background-color: red;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#btn').click(function() {
+                // 标签加类样式选择器
+                $('li.cls').css('backgroundColor', 'green');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="设置样式" id="btn">
+    <ul>
+        <li class="cls">乔峰</li>
+        <li>慕容复</li>
+        <li>虚竹</li>
+        <li class="cls">卡卡西</li>
+        <li>大蛇丸</li>
+    </ul>
+</body>
+</html>

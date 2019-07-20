@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+
+    <!-- <script>
+        window.onload = function () {
+            var btn = document.getElementById('btn');
+            btn.onclick = function () {
+                if (this.value == '关灯') {
+                    document.body.style.backgroundColor = 'black';
+                    this.value = '开灯';
+                } else {
+                    document.body.style.backgroundColor = 'white';
+                    this.value = '关灯';
+                }
+            }
+        }
+    </script> -->
+
+    <script>
+        // $(function () {
+        //     var btn = $('#btn')[0];
+        //     btn.onclick = function () {
+        //         if (btn.value == '关灯') {
+        //             $('body').css({ 'backgroundColor': 'black' });
+        //             $(this).val('开灯');
+        //         } else if (btn.value == '开灯') {
+        //             $('body').css({ 'backgroundColor': 'white' });
+        //             $(this).val('关灯');
+        //         }
+        //     }
+        // })
+
+        $(function () {
+            $('#btn').click(function() {
+                if ($(this).val() == '关灯') {
+                    $('body').css('backgroundColor', 'black');
+                    $(this).val('开灯');
+                } else {
+                    $('body').css('backgroundColor', 'white');
+                    $(this).val('关灯');
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" value="关灯" id="btn">
+</body>
+
+</html>

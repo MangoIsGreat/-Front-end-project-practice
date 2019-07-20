@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+        <div>这是一个广告图片</div>
+        <ul>
+            <li>这是一个列表</li>
+        </ul>
+        <span>说明性文字</span>
+    </div>
+
+    <script>
+        var box = document.getElementById('box');
+        // console.log(box.firstChild);
+
+        // console.log(box.firstElementChild);
+
+        var ele = getFirstElementChild('box');
+        console.log(ele);
+
+        function getFirstElementChild(element) {
+            var node, nodes = element.childNodes, i = 0;
+            while (node = nodes[i++]) {
+                if (node.nodeType === 1) {
+                    return node;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兼容性处理</title>
+</head>
+<body>
+    <div id="box">
+        hello
+    </div>
+
+    <script>
+        // 如何知道浏览器是否支持元素的某个属性
+        // var box = document.getElementById('box');
+
+        // 当属性不存在的时候返回的是undefined
+        // console.log(typeof box.a);
+
+        // 当属性存在的时候返回的是 该属性的类型
+        // console.log(typeof box.id);
+        var box = document.getElementById('box');
+        console.log(getInnerText(box));
+
+        // 处理innerText的兼容性问题
+        function getInnerText(element) {
+            // 判断当前浏览器是否支持元素的innerText属性， 支持innerText使用element.innerText获取内容
+            // 如果不支持innerText属性，使用element.textContent获取内容
+            if (typeof element.innerText === 'string') {
+                return element.innerText;
+            }else {
+                return element.textContent;
+            }
+        }
+
+        box.innerHTML = 'hello world';
+
+        // 设置内容的时候
+        // innerText(textConeten) 当设置不含标签的内容的时候应该使用innerText, 效率高
+        // innerHTML
+    </script>
+</body>
+</html>

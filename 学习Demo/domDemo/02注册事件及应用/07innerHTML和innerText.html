@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        我是一个div
+        <span>这是一个span</span>
+    </div>
+
+    <b>123</b>
+    <!-- 转义符 -->
+    &lt;aaa&gt;
+
+    <script>
+        var box = document.getElementById('box');
+        console.log(box.innerHTML);
+        console.log(box.innerText);
+
+        box.innerHTML = '<b>黑马</b>程序员';
+    </script>
+</body>
+</html>

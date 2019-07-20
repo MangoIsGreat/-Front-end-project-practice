@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        // window.onload = function () {
+        //     console.log(123);
+        // }
+        // window.onload = function () {
+        //     console.log(345);
+        // }
+    </script>
+    <script>
+        // $(window).load(function() {
+        //     console.log(123);
+        // })
+        // 页面中的所有内容加载完后才会执行
+        $(window).load(function() {
+            console.log(345);
+        })
+        // 页面中基本的内容（标签）加载完后机会执行，所以比load事件加载速度快
+        $(document).ready(function() {
+            console.log(789);
+        })
+        // 页面中基本的标签加载完毕后就会触发
+        jQuery(function() {
+            console.log('ahhahh');
+        })
+        // 页面中基本的标签加载完毕后就会触发
+        $(function() {
+            console.log('年华出 辉煌喜欢吃');
+        })
+        // 推荐写法，更简单
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn"/>
+    <div id="dv"></div>
+</body>
+</html>

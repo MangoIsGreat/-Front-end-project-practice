@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>检测用户名和密码</title>
+    <style type="text/css">
+        .bg {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txtUserName"> <br>
+<input type="password" id="txtUserPassword"> <br>
+<input type="button" id="btnLogin" value="登录">
+<script>
+    // 检测用户名是否是3-6位，密码是否是6-8位，如果不满足要求高亮显示文本框
+    var btnLogin = document.getElementById('btnLogin');
+
+    btnLogin.onclick = function () {
+        // 检测用户名是否是3-6位，密码是否是6-8位
+        var txtUserName = document.getElementById('txtUserName');
+        var txtUserPassword = document.getElementById('txtUserPassword');
+
+        // 检测用户名是否是3-6位
+        if (txtUserName.value.length < 3 || txtUserName.value.length > 6) {
+            txtUserName.className = 'bg';
+            return;
+        } else {
+            txtUserName.className = '';
+        }
+
+        // 密码是否是6-8位
+        if (txtUserPassword.value.length < 6 || txtUserPassword.value.length > 8){
+            txtUserPassword.className = 'bg';
+            return;
+        } else {
+            txtUserPassword.className = '';
+        }
+
+        console.log('执行登录');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>非表单元素的属性</title>
+</head>
+<body>
+<a href="http://www.baidu.com" id="link" title="我是百度">百度</a>
+<img src="images/a.jpg " alt="美女" id="mv">
+
+<script>
+    var link = document.getElementById('link');
+    var mv = document.getElementById('mv');
+
+    // 获取DOM元素的属性值
+    console.log(link.id);
+    console.log(link.href);
+    console.log(link.title);
+
+    console.log('\n');
+
+    console.log(mv.id);
+    console.log(mv.src);
+    console.log(mv.alt);
+
+    // 设置DOM对象的属性
+    link.href = 'http://www.sina.com';
+    link.title = '我是sina';
+
+    link.id = 'new';
+    // console.log(new.href);
+</script>
+</body>
+</html>

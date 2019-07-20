@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#uu>li').mouseover(function() {
+                $(this).css('backgroundColor', 'green');
+            })
+            $('#uu>li').mouseout(function() {
+                $(this).css('backgroundColor', '');
+            })
+        })
+
+        $(function() {
+            $('#btn').click(function() {
+                $('div *').css('backgroundColor', 'yellow');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <div id="dv">
+        <p>这是一个p</p>
+        <span>这是一个span</span>
+    </div>
+    <ul id="uu">
+        <li>火箭</li>
+        <li>马刺</li>
+        <li>公牛</li>
+        <li>小牛</li>
+        <li>大牛</li>
+        <li>大叫牛</li>
+        <li>牛逼</li>
+    </ul>
+</body>
+</html>

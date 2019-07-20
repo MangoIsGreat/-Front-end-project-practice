@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // function random (min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+        // var r = random (10, 20);
+        // console.log(r);
+
+        // console.log(random(10, 20));
+        // function random(min, max) {
+        //     return Math.floor(Math.random() * (max - min +1)) +min;
+        // }
+
+
+        // function randomRGB(min, max) {
+        //     var color1 = random(min, max);
+        //     var color2 = random(min, max);
+        //     var color3 = random(min, max);
+
+        //     return 'rgb(' + color1 + ',' + color2 + ',' + color3 + ')';
+        // }
+        // console.log(randomRGB(0, 255));
+
+
+        // function max() {
+        //     var max = arguments[0];
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (max < arguments[i]) {
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // console.log(max(10, 20, 5, 100, 255));
+
+
+        function min () {
+            var min = arguments[0];
+            for (var i = 0; i < arguments.length; i++) {
+                if (min > arguments[i]) {
+                    min = arguments[i];
+                }
+            }
+            return min;
+        }
+        console.log(min(10, 20, 5, 100, 255, -1, 2));
+
+
+        // var MyMath = {
+        //     max: function () {
+        //         function max() {
+        //             var max = arguments[0];
+        //             for (var i = 0; i < arguments.length; i++) {
+        //                 if (max < arguments[i]) {
+        //                     max = arguments[i];
+        //                 }
+        //             }
+        //             return max;
+        //         }
+
+        //     },
+        //     min: function () {
+        //         function min() {
+        //             var min = arguments[0];
+        //             for (var i = 0; i < arguments.length; i++) {
+        //                 if (min > arguments[i]) {
+        //                     min = arguments[i];
+        //                 }
+        //             }
+        //             return min;
+        //         }
+
+        //     }
+        // }
+        // console.log(MyMath.min(10, 20, 5, 100, 255, -1, 2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

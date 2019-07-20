@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历对象和删除对象的属性</title>
+    <script>
+        var obj = {
+            name: 'zs',
+            age: '20',
+            sayHi: function() {
+                console.log(this.name + ':hello');
+            }
+        }
+
+        // for (var key in obj) {
+        //     console.log(key + '----' + obj[key]);
+        // }
+
+            // var o = {};
+            // for (var i = 0; i<10; i++) {
+            //     o['a' + i] = i*2;
+            // }
+            // console.log(o);
+
+            // for (var key in o) {
+            //     console.log(key + '----' + o[key]);
+            // }
+
+        console.log(obj.age);
+        delete obj.age;
+        
+        console.log(obj.age);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

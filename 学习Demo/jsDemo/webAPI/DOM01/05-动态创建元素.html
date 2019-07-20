@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="点击" id="btn">
+    <div id="box"></div>
+
+
+    <script>
+        var datas = ['刘德华', '成龙', '周星驰', '范冰冰'];
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var box = document.getElementById('box');
+
+            var array = [];
+            array.push('<ul>');
+
+            // var html = '<ul>';
+
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i];
+                // html += '<li>' + data + '</li>';
+                array.push('<li>' + data + '</li>');
+            }
+
+            // html += '</ul>';
+
+            array.push('</ul>');
+
+            // box.innerHTML = html;
+            box.innerHTML = array.join('');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+body, div, a, span, ul, li, input, svg, use {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+body {
+    /*height: 1000px;*/
+    /*overflow-x: hidden;*/
+    /*scroll	裁剪内容 - 提供滚动机制。*/
+    overflow-y: scroll;
+    position: relative;
+    text-align: center;
+}
+
+/*网页头部*/
+.head {
+    width: 100%;
+    height: 32px;
+    border-bottom: 1px solid #ebebeb;
+}
+.head .head-left {
+    margin-left: 18px;
+}
+.head div li {
+    font-size: 12px;
+    line-height: 32px;
+}
+.head .head-left li a,
+.head .head-left .head-left-icon a,
+.head .head-right .right a {
+    color: #555;
+}
+/*设置浮动*/
+.head .head-left li a {
+    float: left;
+}
+.head .head-right{
+    float: right;
+}
+.head .head-right ul {
+    float: left;
+}
+.head .head-right span {
+    float: left;
+}
+.head .head-right .right li {
+    float: left;
+}
+/*显示天气预报的小logo  start*/
+.head .head-left .weather-2 {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: 6px;
+    float: left;
+}
+.head .head-left .weather-2 {
+    background: url("images/a1.png") no-repeat;
+    background-size: cover;
+}
+/*显示天气预报的小logo  end*/
+
+/*微调li元素之间的间距  start*/
+.head .head-left .weather {
+    float: left;
+}
+.head .head-left .weather-1 {
+    width: 28px;
+    height: 32px;
+    margin-right: 10px;
+}
+.head .head-left .weather-2 {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+}
+.head .head-left .weather-3 {
+    margin-right: 12px;
+}
+.head .head-left .weather-4 {
+    margin-right: 10px;
+    font-weight: 700;
+}
+.head .head-left .weather-4 a {
+    color: #4484ff;
+}
+.head .head-left .weather-5 {
+    margin-right: 10px;
+}
+.head .head-left .weather-6 {
+    margin-right: 13px;
+}
+/*取消a标签下划线*/
+.head .head-left .weather a {
+    text-decoration: none;
+}
+
+.head .head-left .head-left-icon a{
+    margin-right: 22px;
+}
+/*微调li元素之间的间距  end*/
+
+/*微调右侧li元素的样式  start*/
+.head .head-right .right-icon a {
+    font-size: 13px;
+    font-weight: 700;
+}
+.head .head-right .right-icon-1 a,
+.head .head-right .right-icon-2 a {
+    font-size: 13px;
+}
+.head .head-right li {
+    margin-right: 21px;
+}
+
+/*更多产品*/
+.head-right span {
+    display: inline-block;
+    width: 88px;
+    height: 32px;
+    background-color: #398bfb;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    font-size: 13px;
+}
+/*微调右侧li元素的样式  end*/
+
+/*主体部分 start*/
+.body {
+    position: relative;
+    height: 260px;
+    min-height: 260px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 370px;
+}
+.body-wrapper {
+    width: 641px;
+    height: 219px;
+    position: absolute;
+    left: 180px;
+    top: 41px;
+    /*border: 1px solid black;*/
+}
+/*logo*/
+.body-wrapper-img {
+    width: 270px;
+    height: 129px;
+    background: url(images/bd_logo1.png) no-repeat;
+    background-size: cover;
+    position: static;
+    margin: 33px  auto 0;
+    cursor: pointer;
+}
+/*搜索框*/
+.body-wrapper-form {
+    position: relative;
+    margin-top: 18px;
+}
+.body-wrapper-form-sousuo {
+    width: 536px;
+    height: 40px;
+}
+.body-wrapper-form-sousuo input {
+    width: 480px;
+    height: 20px;
+    padding: 9px 48px 9px 7px;
+    border: 1px solid #b9b9b9;
+    border-right: 0;
+    /*margin-top: 18px;*/
+}
+.body-wrapper-form-btn input {
+    width: 105px;
+    height: 40px;
+    background-color: #38f;
+    border: 0;
+    padding: 0;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+/*主体部分 end*/
+
+/*底部样式 start*/
+.footer {
+    width: 1000px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+/*设置浮动*/
+.copyright-text .sethome,
+.copyright-text .copyright-baidu,
+.copyright-text .copyright-required,
+.copyright-text .copyright-opinion,
+.copyright-text .copyright-num,
+.copyright-text .copyright-logo {
+    font-size: 12px;
+    color: #999;
+}
+.copyright-text .copyright-baidu,
+.copyright-text .copyright-required,
+.copyright-text .copyright-opinion,
+.copyright-text .copyright-num {
+    margin-right: -5px;
+}
+.copyright-logo .icon use {
+    font-size: 14px;
+}
+.footer .recordcode a {
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+}
+.copyright-text .sethome {
+    margin-right: 12px;
+}
+/*底部样式 end*/
+
+/*js控制侧边栏样式 start*/
+.body-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 722px;
+    background-color: #f9f9f9;
+}
+.body-right #more-goods {
+    display: inline-block;
+    width: 82px;
+    height: 40px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 32px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.body-right a {
+    display: block;
+    width: 76px;
+    height: 67px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-right: 0;
+    margin-left: 6px;
+    margin-top: 9px;
+    text-decoration: none;
+}
+.body-right a .more-goods-img {
+    display: block;
+    width: 38px;
+    height: 40px;
+}
+.body-right a .more-goods-img01 {
+    background: url(images/sprite-right-icon.png) 0 0 no-repeat;
+    margin: 0 0 0 17px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .more-goods-img02 {
+    background: url(images/sprite-right-icon.png) 0 -40px no-repeat;
+    margin: 0 0 0 17px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .more-goods-img03 {
+    background: url(images/sprite-right-icon.png) 0 -81px no-repeat;
+    margin: 0 0 0 20px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .more-goods-img04 {
+    background: url(images/sprite-right-icon.png) 0 -121px no-repeat;
+    margin: 0 0 0 18px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .more-goods-img05 {
+    background: url(images/sprite-right-icon.png) 0 -164px no-repeat;
+    margin: 0 0 0 16px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .more-goods-img06 {
+    background: url(images/sprite-right-icon.png) 0 -212px no-repeat;
+    margin: 0 0 0 19px;
+    background-size: cover;
+    margin-left: 18px;
+}
+.body-right a .more-goods-img07 {
+    background: url(images/sprite-right-icon.png) 0 -249px no-repeat;
+    margin: 0 0 0 19px;
+    background-size: cover;
+    margin-left: 21px;
+}
+.body-right a .text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+/*全部产品*/
+.body-right a.all-goods {
+    border-bottom: none;
+}
+.body-right .all-goods-sp {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-left: 8px;
+}

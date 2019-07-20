@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象字面量</title>
+    <script>
+        // 封装dog这个对象
+        var dog = {
+            name: 'puppy',
+            type: '中华田园犬',
+            age: '2',
+            color: 'yellow',
+
+            bark: function () {
+                // this在方法中代表的是当前对象dog
+                console.log(this);
+            },
+
+            eat: function () {
+                console.log(this.name+':啃骨头');
+            }
+        }
+
+        // 访问对象中的属性：对象.属性名
+        console.log(dog.name);
+        console.log(dog.type);
+        // 访问对象中的方法：对象.方法名
+        dog.bark();
+        // dog.eat();
+
+        // 对象中属性的另一种访问方式，使用属性的方式进行访问，以后在某些时候会变得很方便
+        // console.log(dog['name']);
+        // console.log(dog['age']);
+
+
+        // 函数和方法的区别：
+        // 1.函数：独立存在的函数
+
+        // function fn() {
+
+        // }
+        // fn();  //函数调用
+
+        // 2.方法：属于对象的函数
+        // dog.bark();  //方法的调用
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

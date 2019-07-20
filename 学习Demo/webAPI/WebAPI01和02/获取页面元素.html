@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取页面元素</title>
+</head>
+<body>
+<div>hello</div>
+<div class="main">world</div>
+<div>heima</div>
+
+<p id="p"></p>
+<script>
+    var main = document.getElementById('p');
+    // console.log(main);
+    // console.log('abc');
+
+    // 打印对象
+    console.dir(main);
+
+    // 对象是有类型的
+    var arr = new Array();
+    console.dir(arr);
+</script>
+</body>
+</html>

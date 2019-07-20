@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="button" value="获取文本框的值" id="btn">
+
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            input = inputs[i];
+            if (input.type == 'text') {
+                input.value = i;
+            }
+        }
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var array = [];
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.type == 'text') {
+                    array.push(input.value);
+                }
+           
+            }
+            console.log(array.join('|'));
+        }
+
+        
+    </script>
+</body>
+
+</html>

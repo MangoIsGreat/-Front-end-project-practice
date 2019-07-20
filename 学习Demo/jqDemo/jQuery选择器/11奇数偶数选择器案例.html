@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            width: 200px;
+            position: absolute;
+            left: 500px;
+        }
+
+        ul li {
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('#ul>li:even').css('backgroundColor', 'red');
+                $('#ul>li:odd').css('backgroundColor', 'yellow');
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" value="隔行变色" id="btn">
+    <ul id="ul">
+        <li>hacjsvjf</li>
+        <li>和v会计法</li>
+        <li>的官方半官方</li>
+        <li>如果如果突然</li>
+        <li>热狗热狗</li>
+        <li>古特刚和他why人家</li>
+        <li>认为他有他</li>
+        <li>图为唐嫣</li>
+        <li>热火也具有</li>
+        <li>温柔与</li>
+    </ul>
+</body>
+
+</html>

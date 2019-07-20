@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#uu>li').mouseenter(function() {
+                // $(this).next().css('backgroundColor','green');
+                // $(this).nextAll().css('backgroundColor', 'red');
+                // $(this).prevAll().css('backgroundColor', 'red');
+                $(this).siblings().css('backgroundColor', 'green');
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul id="uu">
+        <li>vfbeg换个</li>
+        <li>父亲二百</li>
+        <li>俄方5九吗</li>
+        <li>二哥会员</li>
+        <li>发包人一九</li>
+        <li>二杠一九</li>
+    </ul>
+</body>
+</html>

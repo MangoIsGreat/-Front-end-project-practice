@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            var i = 0;
+            $('#btn').click(function() {
+                i++;
+                var aobj = $('<a href="http://www.baidu.com">这是一个超链接'+i+'</a>');
+                // $('#dv').append(aobj);
+                // $('#dv').prepend(aobj);
+                // $('#dv').after(aobj);
+                $('#dv').before(aobj);
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="动态创建元素" id="btn">
+    <div id="dv"></div>
+</body>
+</html>

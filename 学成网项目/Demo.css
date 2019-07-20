@@ -1,0 +1,362 @@
+/* css样式初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/* 清除浮动 */
+.clearfix::before, .clearfix::after {
+    display: table;
+    content: "";
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+a {
+    color: #050505;
+    text-decoration: none;
+}
+body {
+    /* 整个页面的背景色 */
+    background-color: #f3f5f7;
+}
+/* 版心 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: pink; */
+    /* 不用写高度，让内容自动撑开就可以了 */
+    /* 因为版心宽度都是1200，都要居中对齐，我们就声明一个公共类 */
+}
+/* 页面头部分 start */
+header {
+    height: 100px;
+    overflow: hidden;
+}
+nav {
+    width: 1366px;
+    height: 42px;
+    margin: 26px auto;
+}
+/* logo部分 */
+.logo {
+    float: left;
+}
+/* 导航栏部分 */
+.navbar {
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    /* 行高给父亲，因为行高可以继承 */
+    margin-left: 50px;
+}
+.navbar li {
+    float: left;
+}
+.navbar li a {
+    padding: 0 10px;
+    display: block;
+    /* a是行内元素，给高需要转换成块级元素 */
+    height: 42px;
+}
+.navbar li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+/* 搜索框部分 */
+.search {
+    width: 410px;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    float: left;
+}
+.search input[type=text] {
+    /* background-color: pink; */
+    width: 340px;
+    height: 38px;
+    padding-left: 20px;
+    float: left;
+    border-width: 0;
+}
+.search input[type=submit] {
+    width: 50px;
+    height: 39px;
+    background: #00a4ff url(images/search_03.png) center center no-repeat;
+    float: left;
+    border-width: 0;
+}
+/* 个人中心部分 */
+.personal {
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 15px 0 35px;
+}
+.personal img {
+    padding: 0 8px;
+}
+/* 页面头部分 end */
+
+/* banner部分开始 */
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner-in {
+    height: 420px;
+    background: url(images/banner_03.png) 0 0 no-repeat;
+    position: relative;
+}
+.sliderbar {
+    height: 420px;
+    width: 190px;
+    background: rgba(0, 0,0, 0.3);
+    float: left;
+}
+.sliderbar li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    /* a标签要转换成块级元素才可以定义高度 */
+    display: block;
+    /* 很多时候可以不写 height: 45px; 这样的属性，省去一行代码 */
+    line-height: 45px;
+}
+.sliderbar li a:hover {
+    color: #00a4ff;
+}
+.sliderbar li span {
+    float: right;
+    font-family: Arial;
+    /* 一般符号都用这个字体，更细一些 */
+}
+/* 小课表部分 */
+.timetable {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+.timetable dt {
+    height: 50px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.timetable dd {
+    width: 193px;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+.timetable dd:nth-child(4) h4 {
+    color: #00a4ff;
+}
+.timetable dd:nth-child(4) p {
+    color: #00a4ff;
+}
+.timetable dd:last-child {
+    border: 0;
+}
+.timetable dd h4 {
+    font-weight: normal;
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.timetable dd p {
+    font-size: 14px;
+    color: #a5a5a5;
+}
+.timetable dd a {
+    border: 1px solid #00a4ff;
+    display: block;
+    line-height: 38px;
+    text-align: center;
+    color: #00a4ff;
+    font-weight: 700;
+}
+.timetable dd a:hover {
+    background-color: #00a4ff;
+    color: #fff;
+}
+
+/* 小圆点部分 */
+.circle {
+    width: 180px;
+    height: 22px;
+    /* 子绝父相 */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, .4);
+    margin: 6px 8px;
+    border-radius: 6px;
+}
+.circle .current {
+    /* 注意权重问题 */
+    width: 19px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* banner部分结束 */
+
+/* 精品推荐模块 start */
+.recommend {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    /* 盒子阴影： 水平位置 垂直位置 模糊距离 影子颜色 */
+}
+.recommend a {
+    padding: 0 30px;
+    line-height: 60px;
+    border-right: 1px solid #ccc;
+}
+.recommend a:hover {
+    color: #00a4ff;
+}
+.recommend a:first-child {
+    color: #00a4ff;
+}
+.recommend a:last-child {
+    color: #00a4ff;
+    border: 0;
+    float: right;
+    font-size: 14px;
+}
+/* 精品推荐模块 end */
+
+/* 精品推荐大模块  start */
+
+/* 精品推荐大模块头部 */
+.recom-products {
+    margin-top: 35px;
+}
+.recom-products-hd {
+    height: 40px;
+}
+.recom-products-hd h4 {
+    float: left;
+    color: #494949;
+}
+.recom-products-hd a {
+    float: right;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-right: 30px;
+}
+.recom-products-hd a:hover {
+    color: #00a4ff;
+}
+
+/* 精品推荐大模块主体 */
+.recom-products-bd ul li {
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .2);
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.recom-products-bd ul li:nth-child(5n) {
+    /* 5n就是5的倍数 */
+    margin: 15px 0 0 0;
+}
+.recom-products-bd h5,
+.recom-products-bd p {
+    padding: 0 20px 0px 24px;
+}
+.recom-products-bd h5 {
+    margin-top: 12px;
+    /* height: 22px; */
+    line-height: 22px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #050505;
+}
+.recom-products-bd p {
+    margin-top: 12px;
+    color: #999;
+    font-size: 12px;
+
+}
+.recom-products-bd span {
+    color: #ff7c2d;
+}
+/* 精品推荐大模块  end */
+
+/* 页面底部分  start */
+footer {
+    height: 270px;
+    background-color: #fff;
+    margin-top: 100px;
+}
+.footer-in {
+    padding-top: 30px;
+}
+.footer-l {
+    float: left;
+}
+.footer-l p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+    margin-top: 20px;
+}
+.footer-l a {
+    display: block;
+    width: 118px;
+    height: 34px;
+    border: 1px solid #00a4ff;
+    line-height: 33px;
+    color: #00a4ff;
+    margin-top: 15px;
+    text-align: center;
+}
+.footer-r {
+    float: right;
+    color: #333;
+}
+.footer-r dl {
+    float: left;
+    width: 224px;
+}
+.footer-r dt {
+    font-size: 16px;
+    /* 高度测量用高度剩余法 */
+    height: 30px;
+}
+.footer-r dd {
+    font-size: 12px;
+    height: 20px;
+}
+.footer-r dd a:hover {
+    color: #00a4ff;
+    text-decoration: underline;
+}
+
+
+
+/* 页面底部分  end */

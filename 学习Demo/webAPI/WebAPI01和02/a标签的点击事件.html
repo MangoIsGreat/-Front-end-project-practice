@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>a标签的点击事件</title>
+</head>
+<body>
+<a href="http://baidu.com" id="link">百度</a>
+
+<script>
+    var link = document.getElementById('link');
+    link.onclick = function () {
+        console.log('点击我了');
+
+        // 取消a标签的默认行为
+        return false;
+    }
+</script>
+</body>
+</html>

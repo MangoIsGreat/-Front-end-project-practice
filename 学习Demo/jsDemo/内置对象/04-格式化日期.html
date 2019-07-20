@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function formatDate(date) {
+            if (!(date instanceof Date)) {
+                console.error('date不是日期对象');
+                return;
+            }
+
+            var year = date.getFullYear(),
+                month = date.getMonth() + 1,
+                day = date.getDate(),
+                hour = date.getHours(),
+                minute = date.getMinutes(),
+                second = date.getSeconds();
+
+            // if (month < 10) {
+            //     month = '0' + month;
+            // }
+
+            // if (day < 10) {
+            //     day = '0' + day;
+            // }
+
+            month = month < 10 ? '0' + month : month;
+            day = day < 10 ? '0' + day : day;
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            return year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+
+        }
+
+        var d = new Date();
+        // var d = 1;
+
+        var dateStr = formatDate(d);
+        console.log(dateStr);
+
+        d = new Date(2017, 8, 10);
+        var dateStr = formatDate(d);
+        console.log(dateStr);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

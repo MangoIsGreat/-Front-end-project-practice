@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        .cls {
+            background-color: green;
+        }
+        .cls2 {
+            border: 3px solid yellow;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#btn1').click(function() {
+                $('#dv').addClass('cls');
+            })
+            $('#btn2').click(function() {
+                var ret = $('#dv').hasClass('cls');
+                console.log(ret);
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="添加类样式" id="btn1">
+    <input type="button" value="检测元素是否应用了类样式" id="btn2">
+    <div id="dv"></div>
+</body>
+</html>
